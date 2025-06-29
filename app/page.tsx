@@ -18,10 +18,11 @@ import { FAQSection } from "@/components/FAQSection";
 import { RefillpreneurSection } from "@/components/RefillpreneurSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { ContactSection } from "@/components/ContactSection";
+import { Footer } from "@/components/Footer";
+import { EMICalculator } from "@/components/EmiCalculator";
 import { FloatingApplyButton } from "@/components/FloatingApplyButton";
 import { useLanguage } from "@/hooks/useLanguage";
 import { useAudio } from "@/hooks/useAudio";
-import { EMICalculator } from "@/components/EmiCalculator";
 
 export default function GharGharGasWebsite() {
   const [isScrolled, setIsScrolled] = useState(false);

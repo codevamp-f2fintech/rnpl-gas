@@ -1,6 +1,6 @@
 export const translations = {
   en: {
-    title: "Empowering 10 Crore Households with Clean Cooking",
+    title: "Empowering 30 Crore Households with Clean Cooking",
     subtitle:
       "Get Connection Now, Pay Later - A Govt Initiative for Rural & Commercial Businesses",
     applyRefill: "Apply for Refill",
@@ -176,7 +176,7 @@ export const translations = {
     goToSlide: "Go to slide",
   },
   hi: {
-    title: "स्वच्छ खाना पकाने के साथ 10 करोड़ घरों को सशक्त बनाना",
+    title: "स्वच्छ खाना पकाने के साथ 30 करोड़ घरों को सशक्त बनाना",
     subtitle:
       "अभी कनेक्शन लें, बाद में भुगतान करें - ग्रामीण और व्यापारिक व्यवसायों के लिए सरकारी पहल",
     applyRefill: "रिफिल के लिए आवेदन करें",
@@ -875,7 +875,7 @@ export const translations = {
   },
   ta: {
     title:
-      "10 கோடி குடும்பங்களுக்கு சுத்தமான சமையல் எளிமையாகக் கிடைக்கச் செய்வது",
+      "30 கோடி குடும்பங்களுக்கு சுத்தமான சமையல் எளிமையாகக் கிடைக்கச் செய்வது",
     subtitle:
       "இப்போது இணைப்பு பெறுங்கள், பின்னர் கட்டணம் செலுத்துங்கள் - ஊரக மற்றும் வணிகத்திற்கான அரசு திட்டம்",
     applyRefill: "மீண்டும் நிரப்ப விண்ணப்பிக்கவும்",
@@ -1049,9 +1049,8 @@ export const translations = {
     goToSlide: "ஸ்லைடுக்கு செல்லவும்",
   },
   pa: {
-    title: "10 ਕਰੋੜ ਘਰਾਂ ਨੂੰ ਸਾਫ ਸਿਲੰਡਰ ਨਾਲ ਸਸਤੀ ਰਸੋਈ ਮਿਲੇਗੀ",
+    title: "30 ਕਰੋੜ ਘਰਾਂ ਨੂੰ ਸਾਫ ਸਿਲੰਡਰ ਨਾਲ ਸਸਤੀ ਰਸੋਈ ਮਿਲੇਗੀ",
     subtitle: "ਹੁਣੇ ਕਨੈਕਸ਼ਨ ਲਵੋ, ਬਾਅਦ ਵਿੱਚ ਭੁਗਤਾਨ ਕਰੋ - ਪੇਂਡੂ ਅਤੇ ਵਪਾਰਕ ਉੱਦਮੀ ਲਈ ਸਰਕਾਰ ਦੀ ਪਹੁੰਚ",
-    applyRefill: "ਰੀਫਿੱਲ ਲਈ ਅਰਜ਼ੀ ਦਿਓ",
     applyConnection: "ਨਵਾਂ ਕਨੈਕਸ਼ਨ ਲਵੋ",
     partnerWithUs: "ਸਾਡੇ ਨਾਲ ਭਾਗੀਦਾਰ ਬਣੋ",
     applyNow: "ਹੁਣੇ ਅਰਜ਼ੀ ਦਿਓ",
@@ -1216,6 +1215,4 @@ export const translations = {
   }
   // Add other languages here ( ta, te, pa)
 };
-
-export type Language = keyof typeof translations;
 export type TranslationKey = keyof typeof translations.en;

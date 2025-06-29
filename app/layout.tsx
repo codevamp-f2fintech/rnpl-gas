@@ -1,4 +1,3 @@
-import React from "react";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 
@@ -9,7 +8,7 @@ export const metadata = {
   description: "Safe gas delivery service",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
