@@ -53,17 +53,9 @@ export function HeroSection({ isLiteMode }: HeroSectionProps) {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
           >
-            {currentLanguage === "en" ? (
-              <>
-                Empowering{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-green-400">
-                  10 Crore
-                </span>{" "}
-                Households
-              </>
-            ) : (
+            {
               t.title
-            )}
+            }
           </motion.h1>
 
           <motion.h2
@@ -72,7 +64,7 @@ export function HeroSection({ isLiteMode }: HeroSectionProps) {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-2xl md:text-3xl text-white mb-4"
           >
-            {currentLanguage === "en" ? "with Clean Cooking" : ""}
+            {/* {currentLanguage === "en" ? "with Clean Cooking" : ""} */}
           </motion.h2>
 
           <motion.p

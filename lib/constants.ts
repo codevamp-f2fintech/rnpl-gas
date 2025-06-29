@@ -43,45 +43,68 @@ export const strategies = [
 
 export const faqData = [
   {
-    question: "क्या EMI सच में फ्री है?",
-    questionEn: "Is EMI really free?",
+    question: "आरएनपीएल क्या है और यह मेरी कैसे मदद करता है?",
+    questionEn: "What is RNPL and how does it help me? ",
     answer:
-      "हाँ, हमारी EMI योजना में कोई प्रोसेसिंग फीस या छुपी हुई लागत नहीं है। आप केवल गैस की कीमत चुकाते हैं।",
+      "आरएनपीएल (अभी रिफिल करें, बाद में भुगतान करें) आपको अपना एलपीजी सिलेंडर रिफिल या नया कनेक्शन तुरंत प्राप्त करने की अनुमति देता है, और 2 से 12 महीनों में आसान ईएमआई में भुगतान करता है। अब आपको उच्च अग्रिम गैस लागतों के बारे में चिंता करने की आवश्यकता नहीं है।",
     answerEn:
-      "Yes, our EMI plan has no processing fees or hidden costs. You only pay the gas price.",
+      "RNPL (Refill Now, Pay Later) allows you to get your LPG cylinder refill or a new connection immediately, and pay in easy EMIs over 2 to 12 months. You no longer need to worry about high upfront gas costs. ",
   },
   {
-    question: "नया कनेक्शन कैसे लें?",
-    questionEn: "How to get a new connection?",
+    question: "आरएनपीएल योजना के लिए कौन आवेदन कर सकता है?",
+    questionEn: "Who can apply for RNPL plans? ",
     answer:
-      "आप हमारी वेबसाइट पर ऑनलाइन आवेदन कर सकते हैं या हमारे व्हाट्सऐप नंबर पर संपर्क कर सकते हैं। घरेलू और व्यापारिक दोनों के लिए अलग फॉर्म हैं।",
+      "आधार और पैन कार्ड वाला कोई भी व्यक्ति आवेदन कर सकता है। हम घरेलू उपयोगकर्ताओं (घरेलू) और वाणिज्यिक उपयोगकर्ताओं (होटल, ढाबे, छोटे व्यवसाय) दोनों के लिए योजनाएँ प्रदान करते हैं।",
     answerEn:
-      "You can apply online on our website or contact us on our WhatsApp number. We have separate forms for domestic and commercial connections.",
+      "Anyone with an Aadhaar and PAN card can apply. We offer plans for both domestic users (households) and commercial users (hotels, dhabas, small businesses). ",
   },
   {
-    question: "डिलीवरी कब होगी?",
-    questionEn: "When will delivery happen?",
+    question: "EMI कैसे काम करती है?",
+    questionEn: "How do the EMIs work?",
     answer:
-      "आवेदन स्वीकृति के 24-48 घंटे के भीतर आपके घर या व्यापारिक स्थान तक गैस पहुंचा दी जाएगी।",
+      "आप मासिक, साप्ताहिक, हर 15 दिन में या फिर प्रतिदिन के बराबर भुगतान करने का विकल्प चुन सकते हैं। EMI लचीली होती है, जो प्लान के आधार पर 9 रुपये प्रतिदिन से शुरू होती है। भुगतान विधियों में UPI, BBPS, WhatsApp और कैश कलेक्शन शामिल हैं।",
     answerEn:
-      "Gas will be delivered to your home or business location within 24-48 hours of application approval.",
+      "You can choose to repay monthly, weekly, every 15 days, or even calculate a daily equivalent. EMIs are flexible, starting from as low as Rs.9 per day, depending on the plan. Payment methods include UPI, BBPS, WhatsApp, and cash collection.",
   },
   {
-    question: "व्यापारिक ग्राहकों के लिए क्या विशेष सुविधा है?",
-    questionEn:
-      "What special facilities are available for commercial customers?",
+    question: "क्या इसमें कोई ब्याज या छुपा हुआ शुल्क है?",
+    questionEn: "Is there any interest or hidden charge?",
     answer:
-      "व्यापारिक ग्राहकों को बल्क डिस्काउंट, प्राथमिकता डिलीवरी, और विशेष EMI प्लान मिलते हैं। रेस्टोरेंट, होटल, और फूड वेंडर्स के लिए अलग पैकेज हैं।",
+      "कोई छिपी हुई रुचि नहीं। सेवा और प्रौद्योगिकी लागतों को कवर करने के लिए प्रत्येक योजना में एक छोटा सा सेटअप या सुविधा शुल्क शामिल है। आवेदन करने से पहले यह स्पष्ट रूप से उल्लेख किया जाता है।",
     answerEn:
-      "Commercial customers get bulk discounts, priority delivery, and special EMI plans. We have separate packages for restaurants, hotels, and food vendors.",
+      "No hidden interest. A small setup or convenience fee is included in each plan to cover service and technology costs. This is clearly mentioned upfront before you apply. ",
   },
   {
-    question: "क्या CIBIL स्कोर जरूरी है?",
-    questionEn: "Is CIBIL score required?",
+    question: "यदि मैं EMI का भुगतान करने से चूक जाऊं तो क्या होगा?",
+    questionEn: "What if I miss an EMI? ",
     answer:
-      "नहीं, हमारे पास App Score सिस्टम है जो बिना CIBIL के भी आपको लोन दिलवा सकता है।",
+      "10 दिन की छूट अवधि के बाद 2% प्रति माह विलंब शुल्क लागू होता है। हम आपको ट्रैक पर बने रहने में मदद करने के लिए एसएमएस, व्हाट्सएप और कॉल के माध्यम से रिमाइंडर भी भेजते हैं।",
     answerEn:
-      "No, we have an App Score system that can get you a loan even without CIBIL.",
+      "A 2% per month late fee applies after a 10-day grace period. We also send reminders via SMS,WhatsApp, and calls to help you stay on track.",
+  },
+  {
+    question: "क्या मैं अपना ऋण समय से पहले बंद कर सकता हूँ?",
+    questionEn: "Can I close my loan early?",
+    answer:
+      "आपकी योजना के आधार पर, आप ये कमा सकते हैं: ● घरेलू योजनाओं पर ₹150 तक का कैशबैक● वाणिज्यिक योजनाओं पर ₹1,000 तक का कैशबैक● जल्दी भुगतान वाउचर और रेफ़रल बोनस",
+    answerEn:
+      "Yes! You can foreclose or repay early anytime without extra charges, and still keep your cashback and rewards. ",
+  },
+  {
+    question: "क्या आरएनपीएल मेरी एलपीजी सब्सिडी को प्रभावित करता है?",
+    questionEn: "Does RNPL affect my LPG subsidy? ",
+    answer:
+      "नहीं। आपको अपनी एलपीजी सब्सिडी (पहल या डीबीटीएल के माध्यम से) सीधे आपके बैंक खाते में मिलती रहेगी। आरएनपीएल आपके नकदी प्रवाह को सहारा देने के लिए बनाया गया है, न कि सरकारी सब्सिडी की जगह लेने के लिए।",
+    answerEn:
+      "No. You continue to receive your LPG subsidy (via PAHAL or DBTL) directly in your bank account. RNPL is designed to support your cash flow, not replace government subsidies. ",
+  },
+  {
+    question: "मैं आरएनपीएल योजना के लिए कैसे आवेदन कर सकता हूं?",
+    questionEn: "How can I apply for an RNPL plan?",
+    answer:
+      "● अपना प्लान ऑनलाइन या हमारे एजेंटों के माध्यम से चुनें ● आधार + पैन केवाईसी पूरा करें ● आपका वॉलेट स्वीकृत हो गया है और आपके एलपीजी वितरक के पास लॉक हो गया है ● अपना सिलेंडर या कनेक्शन तुरंत प्राप्त करें और उसका उपयोग तुरंत शुरू करें",
+    answerEn:
+      "●  Choose your plan online or through our agents  ●  Complete Aadhaar + PAN KYC ●  Your wallet is approved and locked to your LPG distributor ●  Get your cylinder or connection quickly and start using it immediately",
   },
 ];
 

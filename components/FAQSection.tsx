@@ -1,23 +1,27 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { ChevronDown, ChevronUp } from "lucide-react"
-import { faqData } from "@/lib/constants"
-import { useLanguage } from "@/hooks/useLanguage"
-import { useAudio } from "@/hooks/useAudio"
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { faqData } from "@/lib/constants";
+import { useLanguage } from "@/hooks/useLanguage";
+import { useAudio } from "@/hooks/useAudio";
+import { CircleCheck, Minus, Plus, QuestionMarkCircle } from "lucide-react";
 
 export function FAQSection() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null)
-  const { currentLanguage, t } = useLanguage()
-  const { triggerHapticFeedback, playClickSound } = useAudio()
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const { currentLanguage, t } = useLanguage();
+  const { triggerHapticFeedback, playClickSound } = useAudio();
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#0B1C39] mb-4">{t.faqTitle}</h2>
-          <p className="text-xl text-gray-600">{t.frequentlyAskedQuestions}</p>
+          <h2 className="text-4xl font-bold text-[#0B1C39] mb-4">
+            {t.faqTitle}
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            {t.frequentlyAskedQuestions}
+          </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
@@ -29,27 +33,35 @@ export function FAQSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-lg shadow-md overflow-hidden"
+                className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow"
               >
                 <button
                   onClick={() => {
-                    setOpenFaq(openFaq === index ? null : index)
-                    triggerHapticFeedback()
-                    playClickSound(true)
+                    setOpenFaq(openFaq === index ? null : index);
+                    triggerHapticFeedback();
+                    playClickSound(true);
                   }}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-inset"
+                  className="w-full px-8 py-6 text-left flex items-center justify-between transition-all duration-300"
                   aria-expanded={openFaq === index}
                   aria-controls={`faq-answer-${index}`}
                 >
-                  <span className="font-semibold text-[#0B1C39] text-lg">
-                    {currentLanguage === "hi" ? faq.question : faq.questionEn}
-                  </span>
-                  {openFaq === index ? (
-                    <ChevronUp className="w-5 h-5 text-orange-500" aria-hidden="true" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-orange-500" aria-hidden="true" />
-                  )}
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-gray-100 p-2 rounded-lg ">
+                      <CircleCheck className="w-6 h-6  text-blue-500" />
+                    </div>
+                    <span className="font-semibold text-[#0B1C39] text-lg text-left">
+                      {currentLanguage === "hi" ? faq.question : faq.questionEn}
+                    </span>
+                  </div>
+                  <div className="ml-4 shrink-0">
+                    {openFaq === index ? (
+                      <Minus className="w-6 h-6 text-orange-500" />
+                    ) : (
+                      <Plus className="w-6 h-6 text-blue-500" />
+                    )}
+                  </div>
                 </button>
+
                 <AnimatePresence>
                   {openFaq === index && (
                     <motion.div
@@ -57,12 +69,18 @@ export function FAQSection() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="px-6 pb-4"
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="overflow-hidden"
                     >
-                      <p className="text-gray-700 leading-relaxed">
-                        {currentLanguage === "hi" ? faq.answer : faq.answerEn}
-                      </p>
+                      <div className="px-8 pb-6 ml-14">
+                        <div className="border-l-2 border-blue-500 pl-4">
+                          <p className="text-gray-700 leading-relaxed">
+                            {currentLanguage === "hi"
+                              ? faq.answer
+                              : faq.answerEn}
+                          </p>
+                        </div>
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -72,5 +90,5 @@ export function FAQSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

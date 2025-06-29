@@ -25,8 +25,7 @@ export function RefillpreneurSection() {
             <div>
               <h2 className="text-4xl font-bold mb-6">{t.becomeRefillpreneur}</h2>
               <p className="text-xl text-gray-300 mb-8">
-                ग्रामीण युवाओं और महिलाओं के लिए आय का नया अवसर। गैस रिफिल एजेंट बनकर महीने में ₹15,000 - ₹30,000 तक कमाएं। व्यापारिक
-                ग्राहकों की सेवा करके अतिरिक्त आय पाएं।
+                {t.refillpreneurTitle}
               </p>
 
               <div className="space-y-4 mb-8">

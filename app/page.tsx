@@ -127,8 +127,7 @@ export default function GharGharGasWebsite() {
       <TimelineSection />
       <ApplicationForms />
       <StrategiesCarousel isLiteMode={isLiteMode} />
-      <PlansSection />
-      <FAQSection />
+      {/* <PlansSection /> */}
       <RefillpreneurSection />
       <TestimonialsSection />
       <ContactSection />
@@ -136,6 +135,7 @@ export default function GharGharGasWebsite() {
 
       {/* Floating Components */}
       <EMICalculator />
+      <FAQSection />
       <FloatingApplyButton isVisible={isApplyNowVisible} />
 
       {/* Global Styles */}

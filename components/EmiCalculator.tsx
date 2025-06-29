@@ -10,14 +10,27 @@ export function EMICalculator() {
   const [isEmiCalculatorOpen, setIsEmiCalculatorOpen] = useState(false)
   const [emiAmount, setEmiAmount] = useState(1000)
   const [emiPlan, setEmiPlan] = useState("monthly")
+  const [emiMonths, setEmiMonths] = useState(4)
   const { t } = useLanguage()
   const { triggerHapticFeedback, playClickSound } = useAudio()
 
   const calculateEMI = () => {
+    const daysInMonth = 30
+    const weeksInMonth = 4.33
+
     const plans = {
-      daily: Math.ceil(emiAmount / 120), // 4 months = 120 days
-      weekly: Math.ceil(emiAmount / 16), // 4 months = 16 weeks
-      monthly: Math.ceil(emiAmount / 4), // 4 months
+      daily: Math.ceil(emiAmount / (emiMonths * daysInMonth)),
+      weekly: Math.ceil(emiAmount / (emiMonths * weeksInMonth)),
+      monthly: Math.ceil(emiAmount / emiMonths),
+    }
+    return plans[emiPlan as keyof typeof plans]
+  }
+
+  const getTotalInstallments = () => {
+    const plans = {
+      daily: emiMonths * 30,
+      weekly: Math.ceil(emiMonths * 4.33),
+      monthly: emiMonths,
     }
     return plans[emiPlan as keyof typeof plans]
   }
@@ -68,6 +81,25 @@ export function EMICalculator() {
                 </div>
 
                 <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    {t.duration} / अवधि: {emiMonths} {emiMonths === 1 ? "महीना" : "महीने"}
+                  </label>
+                  <input
+                    type="range"
+                    min="2"
+                    max="12"
+                    step="1"
+                    value={emiMonths}
+                    onChange={(e) => setEmiMonths(Number(e.target.value))}
+                    className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                  />
+                  <div className="flex justify-between text-xs text-gray-500 mt-1">
+                    <span>2 महीने</span>
+                    <span>12 महीने</span>
+                  </div>
+                </div>
+
+                <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">{t.emiPlan} / EMI योजना</label>
                   <select
                     value={emiPlan}
@@ -86,6 +118,24 @@ export function EMICalculator() {
                     <div className="text-sm text-gray-600">
                       {t.per} {emiPlan === "daily" ? t.day : emiPlan === "weekly" ? t.week : t.month}
                     </div>
+                    <div className="text-xs text-gray-500 mt-2">
+                      {getTotalInstallments()} {emiPlan === "daily" ? "दिन" : emiPlan === "weekly" ? "सप्ताह" : "महीने"} में
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 rounded-lg p-3 text-xs text-gray-600">
+                  <div className="flex justify-between">
+                    <span>मूल राशि:</span>
+                    <span>₹{emiAmount}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>कुल किस्तें:</span>
+                    <span>{getTotalInstallments()}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>अवधि:</span>
+                    <span>{emiMonths} महीने</span>
                   </div>
                 </div>
 

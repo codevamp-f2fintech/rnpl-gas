@@ -55,7 +55,7 @@ export function AccessibilityMenu() {
         >
           <Eye className="w-4 h-4" />
           <span className="text-sm font-medium sr-only md:not-sr-only">
-            A11y
+            Accessibility Menu
           </span>
         </button>
 
