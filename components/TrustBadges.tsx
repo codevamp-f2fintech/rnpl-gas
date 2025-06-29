@@ -55,7 +55,7 @@ export function TrustBadges() {
 
           <div className="flex items-center justify-center gap-3">
             <Image
-              src="/ujjwala-yojna.png"
+              src="/Ujjwala-Yojna.png"
               alt="ujjwala logo"
               width={60}
               height={60}
