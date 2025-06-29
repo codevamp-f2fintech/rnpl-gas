@@ -1,7 +1,13 @@
 import { db } from "@/lib/db";
 
+interface RouteParams {
+    params: {
+        id: string;
+    };
+}
+
 // App Router — supports dynamic route [id]
-export async function POST(req, { params }) {
+export async function POST(req: Request, { params }: RouteParams) {
     try {
         const { id } = params; // customer_id from URL
         const body = await req.json();
