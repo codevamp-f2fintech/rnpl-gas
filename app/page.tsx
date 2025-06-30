@@ -126,7 +126,7 @@ export default function GharGharGasWebsite() {
       <NewConnectionSection />
       <TimelineSection />
       <ApplicationForms />
-      <StrategiesCarousel isLiteMode={isLiteMode} />
+      {/* <StrategiesCarousel isLiteMode={isLiteMode} /> */}
       {/* <PlansSection /> */}
       <RefillpreneurSection />
       <TestimonialsSection />

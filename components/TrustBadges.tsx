@@ -60,9 +60,6 @@ export function TrustBadges() {
               width={60}
               height={60}
             />
-            <p className="text-[1.1rem]font-medium text-gray-700">
-              Ujjwala Yojana Partner
-            </p>
           </div>
 
           <div className="flex items-center justify-center gap-3">

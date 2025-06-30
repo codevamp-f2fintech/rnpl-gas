@@ -137,7 +137,7 @@ export const testimonials = [
     language: "Urdu",
     customerType: "Commercial - Restaurant",
     quote:
-      "ہمارے ریستوران کے لیے یہ بہترین سروس ہے۔ EMI کی سہولت سے ہم اپنا کاروبار بڑھا سکے ہیں۔",
+      "My business has grown 50% since joining this program. The EMI system and paylater facility is very helpful for businesses like mine.",
     translation:
       "This is the best service for our restaurant. With EMI facility, we could expand our business.",
     image: "/placeholder.svg?height=80&width=80",

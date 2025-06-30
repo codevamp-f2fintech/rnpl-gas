@@ -25,11 +25,10 @@ export function Header({ isScrolled }: HeaderProps) {
 
   return (
     <header
-      className={`fixed top-0 w-full z-40 transition-all duration-300 h-21 ${
-        isScrolled
+      className={`fixed top-0 w-full z-40 transition-all duration-300 h-21 ${isScrolled
           ? "bg-white shadow-lg py-2"
           : "bg-white/95 backdrop-blur-sm py-4"
-      }`}
+        }`}
       role="banner"
     >
       <div className="container mx-auto px-4">
@@ -63,6 +62,17 @@ export function Header({ isScrolled }: HeaderProps) {
 
             <div>
               <Image src="/images.png" alt="AshokIcon" width={80} height={80} />
+            </div>
+
+            <div className="flex justify-center  items-center text-blue-700 gap-2">
+              <a className="flex gap-2.5" href="https://kzmp13pwtqbjc2s3bqzn.lite.vusercontent.net" target="_blank">
+                <p>Admin Dashboard</p>
+              </a>
+            </div>
+            <div className="flex justify-center  items-center text-blue-700 gap-2">
+              <a className="flex gap-2.5" href="/video-assistant">
+                <p>Video Intro</p>
+              </a>
             </div>
             <div className="flex justify-center  items-center text-blue-700 gap-2">
               <a className="flex gap-2.5" href="/serviceable-locations">
