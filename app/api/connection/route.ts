@@ -1,6 +1,6 @@
 import { db } from "@/lib/db";
 
-export async function POST(request) {
+export async function POST(request: any) {
     try {
         const body = await request.json();
         const {
@@ -20,7 +20,7 @@ export async function POST(request) {
         if (!connectionType || !["domestic", "commercial"].includes(connectionType)) {
             return new Response(JSON.stringify({ message: "Invalid type" }), { status: 400 });
         }
-        let result;
+        let result: any;
         if (connectionType === "domestic") {
             result = await db.query(
                 `INSERT INTO domestic_customer 
