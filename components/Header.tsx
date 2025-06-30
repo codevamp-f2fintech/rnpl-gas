@@ -65,7 +65,7 @@ export function Header({ isScrolled }: HeaderProps) {
             </div>
 
             <div className="flex justify-center  items-center text-blue-700 gap-2">
-              <a className="flex gap-2.5" href="https://kzmp13pwtqbjc2s3bqzn.lite.vusercontent.net" target="_blank">
+              <a className="flex gap-2.5" href="https://kzmk0vn6bb1j93bvmveg.lite.vusercontent.net" target="_blank">
                 <p>Admin Dashboard</p>
               </a>
             </div>
